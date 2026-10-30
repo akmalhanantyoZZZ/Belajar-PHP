@@ -7,18 +7,21 @@
 </head>
 <body>
     <?php
-    // Challenge Mini 2: Bonus Es Teh Gratis
-    $nama_pelanggan = "Budi";
-    $total_pembelian = 25000;
-    $min_bonus = 20000;
-    $total_format = number_format($total_pembelian, 0, ',', '.');
+    // Challenge Mini 3: Sistem Diskon Restoran Bertingkat
+    $nama_pemesan = "Dini";
+    $harga_per_porsi = 30000;
+    $jumlah_porsi = 4;
+    $total_belanja = $harga_per_porsi * $jumlah_porsi;
+    $total_format = number_format($total_belanja, 0, ',', '.');
 
-    echo "<p>Halo $nama_pelanggan, total nota kamu adalah $total_format.</p>";
+    echo "<p>Halo $nama_pemesan, kamu memesan $jumlah_porsi porsi dengan total Rp$total_format</p>";
 
-    if ($total_pembelian >= $min_bonus) {
-        echo "<p>Selamat! Kamu berhak mendapatkan 1 Es Teh Manis Gratis!</p>";
+    if ($total_belanja >= 100000) {
+        echo "<p>Selamat! Kamu mendapatkan Diskon Super sebesar Rp20.000</p>";
+    }elseif ($total_belanja >= 50000) {
+        echo "<p>Selamat! Kamu mendapatkan Diskon Hemat sebesar Rp 10.000!</p>";
     }else {
-        echo "<p>Terimakasih sudah berbelanja di tempat kami.</p>";
+        echo "<p>Maaf, total belanjaan kamu belum mencapai syarat diskon.</p>";
     }
     ?>
 </body>
