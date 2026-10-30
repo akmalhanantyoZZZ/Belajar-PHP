@@ -6,8 +6,10 @@
     <title>Belajar PHP</title>
 </head>
 <body>
+    
+    <!--Ini adalah kalimat mudah -->
     <h1><?php echo "Halo, ini adalah PHP"; ?></h1>
     <p><?php echo "Hari ini aku belajar perihal PHP" ?></p>
-    <p><
+    
 </body>
 </html>
