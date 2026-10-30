@@ -6,22 +6,20 @@
     <title>Belajar PHP</title>
 </head>
 <body>
-     <?php
-    // Variabel & kalimat
-    $nama = "Lina";
-    $makanan_favorit = "Kue";
-    $hobi = "shopping";
-    $saldo_rekening = 700000;
-    $target_rekening = 100000000;
+    <?php
+    // Challenge Mini 2: Bonus Es Teh Gratis
+    $nama_pelanggan = "Budi";
+    $total_pembelian = 25000;
+    $min_bonus = 20000;
+    $total_format = number_format($total_pembelian, 0, ',', '.');
 
-    echo "<p>$nama, suka sekali dengan yang nama nya $makanan_favorit, karena rasanya manis dan terdapat banyak topping, $nama juga memiliki hobi unik, yaitu $hobi terutama di hari weekend</p>";
-    echo "<p>Dan tak hanya itu saja, meskipun $nama suka $hobi, dia memamng memiliki saldo yang cukup banyak, yaitu sekitar $saldo_rekening</p>";
+    echo "<p>Halo $nama_pelanggan, total nota kamu adalah $total_format.</p>";
 
-    if ($saldo_rekening <= $target_rekening) {
-        echo "<p>$nama akan libur $hobi untuk menghemat saldo nya yang hanya sekitar $saldo_rekening</p>";
-     }else {
-        echo "<p>$lina akan melakukan hobi nya yaitu $hobi karena memiliki saldo lebih atau sama dengan $target rekening</p>";
-     }
-     ?>
+    if ($total_pembelian >= $min_bonus) {
+        echo "<p>Selamat! Kamu berhak mendapatkan 1 Es Teh Manis Gratis!</p>";
+    }else {
+        echo "<p>Terimakasih sudah berbelanja di tempat kami.</p>";
+    }
+    ?>
 </body>
 </html>
